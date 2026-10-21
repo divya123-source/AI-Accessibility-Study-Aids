@@ -1,0 +1,487 @@
+/* 1. GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef5ff;
+  color: #24334b;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul,
+ol {
+  padding-left: 25px;
+  margin: 10px 0;
+}
+
+a {
+  color: #2364aa;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* 2. HEADER */
+header {
+  background: linear-gradient(135deg, #2364aa, #76b9ff);
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+header h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+header p {
+  margin: 10px 0;
+}
+
+
+/* 3. NAVIGATION */
+nav {
+  background: white;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px #00000012;
+}
+
+nav a {
+  color: #2364aa;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #123e70;
+  text-decoration: underline;
+}
+
+
+/* 4. MAIN LAYOUT */
+main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 0 18px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px #24508012;
+  scroll-margin-top: 85px;
+}
+
+h2 {
+  color: #2364aa;
+  margin-bottom: 12px;
+  font-size: 27px;
+}
+
+h3 {
+  color: #28517e;
+  margin: 20px 0 10px;
+  font-size: 20px;
+}
+
+strong {
+  color: #174a7e;
+}
+
+.topic-detail {
+  scroll-margin-top: 85px;
+}
+
+
+/* 5. HOME PAGE TOPIC LINKS */
+.topic-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.topic-link {
+  display: block;
+  background: #edf5ff;
+  border: 2px solid #c8def8;
+  border-radius: 12px;
+  padding: 18px;
+  color: #2364aa;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.topic-link:hover {
+  background: #dcecff;
+  transform: translateY(-2px);
+}
+
+
+/* 6. STUDY NOTES */
+.topic-box {
+  background: #f3f8ff;
+  border-left: 4px solid #4c91df;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 8px;
+}
+
+.topic-box p:last-child {
+  margin-bottom: 0;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+
+/* 7. VISUAL SUMMARY / MIND MAP */
+.mindmap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin: 20px 0;
+  padding: 20px;
+  background: #f6f9ff;
+  border: 1px solid #e0eafa;
+  border-radius: 12px;
+}
+
+.map-center {
+  background: #2364aa;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 100%;
+}
+
+.map-branches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+}
+
+.map-branches span {
+  flex: 0 1 auto;
+  background: white;
+  color: #2364aa;
+  border: 1px solid #9fc5f1;
+  border-radius: 9px;
+  padding: 10px 14px;
+  text-align: center;
+}
+
+
+/* 8. BUTTONS */
+button {
+  border: none;
+  padding: 11px 17px;
+  margin: 7px 5px 7px 0;
+  border-radius: 8px;
+  background: #2364aa;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #174a7e;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.stop-btn {
+  background: #64748b;
+}
+
+.stop-btn:hover {
+  background: #475569;
+}
+
+
+/* 9. AUDIO STATUS */
+#audio-status-ml,
+#audio-status-nlp,
+#audio-status-cv,
+#audio-status-nn,
+#audio-status-genai {
+  color: #2364aa;
+  font-size: 14px;
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 15px 0;
+}
+
+
+/* 10. QUIZ */
+.quiz {
+  margin-top: 12px;
+}
+
+.question {
+  background: #f6f9ff;
+  padding: 15px;
+  margin: 13px 0;
+  border: 1px solid #e0eafa;
+  border-radius: 10px;
+}
+
+.question p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.question label {
+  display: block;
+  margin: 7px 0;
+  cursor: pointer;
+}
+
+.question input {
+  margin-right: 8px;
+  accent-color: #2364aa;
+}
+
+.result {
+  font-weight: bold;
+  color: #2364aa;
+  margin-top: 12px;
+}
+
+
+/* 11. BACK TO TOPICS LINK */
+.back-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: #2364aa;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+
+/* 12. VERIFICATION REPORT */
+#verification {
+  scroll-margin-top: 85px;
+}
+
+#verification a {
+  overflow-wrap: anywhere;
+}
+
+#verification code {
+  background: #edf5ff;
+  color: #174a7e;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+
+/* 13. FOOTER */
+footer {
+  background: #1c4778;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+
+/* 14. ACCESSIBILITY */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* 15. TABLET RESPONSIVE DESIGN */
+@media (max-width: 800px) {
+  header h1 {
+    font-size: 30px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .card {
+    padding: 21px;
+  }
+
+  .topic-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+
+/* 16. MOBILE RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  header {
+    padding: 32px 15px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  nav {
+    padding: 12px 8px;
+    gap: 8px 12px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  main {
+    margin: 18px auto;
+    padding: 0 12px;
+  }
+
+  .card {
+    padding: 17px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .topic-list {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-link {
+    padding: 14px;
+  }
+
+  .topic-box {
+    padding: 12px;
+  }
+
+  .mindmap {
+    padding: 14px;
+  }
+
+  .map-center {
+    padding: 11px 16px;
+  }
+
+  .map-branches {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .map-branches span {
+    width: 100%;
+  }
+
+  button {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .question {
+    padding: 12px;
+  }
+
+  footer {
+    padding: 18px 12px;
+    font-size: 14px;
+  }
+}
+
+
+/* 17. REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

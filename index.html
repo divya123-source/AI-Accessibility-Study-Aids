@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Accessibility Study Aids</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>AI Accessibility Study Aids</h1>
+  <p>Learn Smarter, Easier and Better with AI</p>
+  <p>Study notes, mind maps, audio learning and quizzes in one place.</p>
+</header>
+
+<nav aria-label="Main navigation">
+  <a href="#home">Home</a>
+  <a href="#study-notes">Study Notes</a>
+  <a href="#ml">Machine Learning</a>
+  <a href="#nlp">NLP</a>
+  <a href="#cv">Computer Vision</a>
+  <a href="#nn">Neural Networks</a>
+  <a href="#genai">Generative AI</a>
+  <a href="#verification">Verification Report</a>
+</nav>
+
+<main>
+  <!-- HOME -->
+  <section class="card" id="home">
+    <h2>Welcome to AI Study Aids</h2>
+    <p>
+      Artificial Intelligence (AI) enables computers to perform tasks that
+      usually require human intelligence. This website helps students learn
+      AI concepts using simple explanations, visual mind maps, audio listening
+      and interactive quizzes.
+    </p>
+  </section>
+
+  <!-- TOPIC MENU -->
+  <section class="card" id="study-notes">
+    <h2>Study Notes</h2>
+    <p>Choose a topic to open its explanation, visual summary, audio and quiz.</p>
+    <div class="topic-list">
+      <a class="topic-link" href="#ml">🤖 Machine Learning</a>
+      <a class="topic-link" href="#nlp">💬 Natural Language Processing</a>
+      <a class="topic-link" href="#cv">👁️ Computer Vision</a>
+      <a class="topic-link" href="#nn">🧠 Neural Networks</a>
+      <a class="topic-link" href="#genai">✨ Generative AI</a>
+    </div>
+  </section>
+
+  <!-- TOPIC 1: MACHINE LEARNING -->
+  <section class="card topic-detail" id="ml">
+    <h2>1. Machine Learning (ML)</h2>
+
+    <h3>Explanation</h3>
+    <p>
+      Machine Learning is a branch of AI that allows computers to learn patterns
+      from data and make predictions or decisions without being explicitly
+      programmed for every situation.
+    </p>
+
+    <h3>Easy English Version</h3>
+    <div class="topic-box">
+      <p>Machine Learning (ML) is part of Artificial Intelligence (AI). It helps computers learn patterns from data and make predictions.</p>
+      <p><strong>Example:</strong> An email system can learn to find spam messages by studying examples of spam and normal emails.</p>
+      <p><strong>Supervised learning:</strong> Learns from examples that have correct answers.</p>
+      <p><strong>Reinforcement learning:</strong> Learns by taking actions and receiving rewards or penalties.</p>
+      <p><strong>Overfitting:</strong> The model learns its training examples too closely and may do poorly on new examples.</p>
+      <p><strong>Generalisation:</strong> The model can use what it learned on new data.</p>
+    </div>
+
+    <h3>Machine Learning in Simple Steps</h3>
+    <ol>
+      <li><strong>Collect data:</strong> Gather examples.</li>
+      <li><strong>Train the model:</strong> Let the computer find patterns.</li>
+      <li><strong>Test the model:</strong> Check it with new examples.</li>
+      <li><strong>Make a prediction:</strong> Use the learned patterns.</li>
+    </ol>
+
+    <h3>Important Words</h3>
+    <div class="topic-box">
+      <p><strong>Data:</strong> Information used for learning.</p>
+      <p><strong>Model:</strong> The system produced by the learning process.</p>
+      <p><strong>Training:</strong> Learning patterns from examples.</p>
+      <p><strong>Prediction:</strong> The model's output for new information.</p>
+      <p><strong>Overfitting:</strong> Learning training examples too closely.</p>
+      <p><strong>Generalisation:</strong> Working well on unseen examples.</p>
+    </div>
+
+    <h3>Visual Summary</h3>
+    <div class="mindmap" role="img" aria-label="Machine learning process from data to predictions.">
+      <div class="map-center">Machine Learning</div>
+      <div class="map-branches">
+        <span>1. Collect Data</span>
+        <span>2. Train Model</span>
+        <span>3. Test Model</span>
+        <span>4. Predict</span>
+      </div>
+    </div>
+
+    <h3>Short Audio Script</h3>
+    <div class="topic-box">
+      Machine learning is a part of artificial intelligence. It helps computers
+      learn from data and make predictions. For example, an email system can
+      learn to identify spam messages. In supervised learning, the computer
+      learns from examples with correct answers. In reinforcement learning,
+      it learns through actions and rewards. Overfitting happens when a model
+      learns training examples too closely. Generalisation means using what it
+      learned on new data.
+    </div>
+
+    <p>
+      <strong>Original learning resource:</strong>
+      <a href="https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/"
+         target="_blank" rel="noopener noreferrer">
+        MIT OpenCourseWare — Introduction to Machine Learning
+      </a>
+    </p>
+
+    <h3>🎧 Audio Listening</h3>
+    <p>Play the prepared MP3 audio, or use your browser's text-to-speech.</p>
+
+    <audio controls preload="metadata">
+      <source src="audio/ml_basics.mp3" type="audio/mpeg">
+      Your browser does not support audio playback. Try an updated browser.
+    </audio>
+
+    <button type="button" onclick="speakTopic('ml')">▶ Listen with browser voice</button>
+    <button type="button" class="stop-btn" onclick="stopAudio()">■ Stop browser voice</button>
+    <p id="audio-status-ml" aria-live="polite" role="status"></p>
+
+    <h3>📝 Machine Learning Quiz</h3>
+    <form class="quiz" data-topic="ml">
+      <div class="question">
+        <p>1. What does Machine Learning learn from?</p>
+        <label><input type="radio" name="mlq1" value="a"> Only keyboards</label>
+        <label><input type="radio" name="mlq1" value="b"> Data and patterns</label>
+        <label><input type="radio" name="mlq1" value="c"> Computer screens</label>
+      </div>
+
+      <div class="question">
+        <p>2. Which learning type uses labelled data?</p>
+        <label><input type="radio" name="mlq2" value="a"> Supervised Learning</label>
+        <label><input type="radio" name="mlq2" value="b"> Unsupervised Learning</label>
+        <label><input type="radio" name="mlq2" value="c"> Random Learning</label>
+      </div>
+
+      <button type="submit">Check ML Answers</button>
+      <p class="result" aria-live="polite"></p>
+    </form>
+
+    <a class="back-link" href="#study-notes">↑ Back to Topics</a>
+  </section>
+
+  <!-- TOPIC 2: NLP -->
+  <section class="card topic-detail" id="nlp">
+    <h2>2. Natural Language Processing (NLP)</h2>
+
+    <h3>Explanation</h3>
+    <p>
+      Natural Language Processing is a field of AI that helps computers process,
+      understand and generate human language. It works with written text and
+      spoken language.
+    </p>
+
+    <div class="topic-box">
+      <strong>Example:</strong> Chatbots, language translation and speech
+      assistants use NLP to interact with people.
+    </div>
+
+    <h3>Easy English Version</h3>
+    <div class="topic-box">
+      <p>NLP helps computers work with human language. Human language includes the words we write and the words we speak.</p>
+      <p><strong>Text classification:</strong> Places text into groups, such as spam or not spam.</p>
+      <p><strong>Sentiment analysis:</strong> Estimates whether a message sounds positive, negative or neutral.</p>
+      <p><strong>Speech recognition:</strong> Changes spoken words into text.</p>
+      <p><strong>Summarisation:</strong> Makes a shorter version of longer text while keeping its main ideas.</p>
+    </div>
+
+    <h3>How NLP Works</h3>
+    <ol>
+      <li><strong>Receive language:</strong> Get text or speech.</li>
+      <li><strong>Process it:</strong> Analyse words and their context.</li>
+      <li><strong>Find patterns:</strong> Predict the likely meaning or task.</li>
+      <li><strong>Give a result:</strong> Translate, summarise or respond.</li>
+    </ol>
+
+    <h3>Important Words</h3>
+    <div class="topic-box">
+      <p><strong>Language model:</strong> Learns patterns in language.</p>
+      <p><strong>Translation:</strong> Expresses meaning in another language.</p>
+      <p><strong>Context:</strong> Information that helps explain a message.</p>
+      <p><strong>Sentiment:</strong> A feeling or opinion in a message.</p>
+      <p><strong>Limitation:</strong> NLP may misunderstand slang or ambiguous words.</p>
+    </div>
+
+    <h3>Visual Summary</h3>
+    <div class="mindmap" role="img" aria-label="NLP processes human language and produces a result.">
+      <div class="map-center">Natural Language Processing</div>
+      <div class="map-branches">
+        <span>Text / Speech</span>
+        <span>Language Analysis</span>
+        <span>Translation</span>
+        <span>Summary / Answer</span>
+      </div>
+    </div>
+
+    <h3>Short Audio Script</h3>
+    <div class="topic-box">
+      Natural Language Processing, or NLP, helps computers work with human
+      language. Translation apps, chatbots and voice assistants use NLP.
+      Sentiment analysis estimates whether a message is positive, negative
+      or neutral. Speech recognition changes spoken words into text. NLP
+      can make mistakes when words have several meanings or when context
+      is unclear.
+    </div>
+
+    <h3>🎧 Audio Listening</h3>
+    <button type="button" onclick="speakTopic('nlp')">▶ Listen to NLP</button>
+    <button type="button" class="stop-btn" onclick="stopAudio()">■ Stop Audio</button>
+    <p id="audio-status-nlp" aria-live="polite" role="status"></p>
+
+    <h3>📝 NLP Quiz</h3>
+    <form class="quiz" data-topic="nlp">
+      <div class="question">
+        <p>1. What is the main purpose of NLP?</p>
+        <label><input type="radio" name="nlpq1" value="a"> To repair hardware</label>
+        <label><input type="radio" name="nlpq1" value="b"> To process human language</label>
+        <label><input type="radio" name="nlpq1" value="c"> To charge batteries</label>
+      </div>
+
+      <div class="question">
+        <p>2. Which is an example of NLP?</p>
+        <label><input type="radio" name="nlpq2" value="a"> Language translation</label>
+        <label><input type="radio" name="nlpq2" value="b"> Screen brightness</label>
+        <label><input type="radio" name="nlpq2" value="c"> Keyboard cleaning</label>
+      </div>
+
+      <button type="submit">Check NLP Answers</button>
+      <p class="result" aria-live="polite"></p>
+    </form>
+
+    <a class="back-link" href="#study-notes">↑ Back to Topics</a>
+  </section>
+
+  <!-- TOPIC 3: COMPUTER VISION -->
+  <section class="card topic-detail" id="cv">
+    <h2>3. Computer Vision</h2>
+
+    <h3>Explanation</h3>
+    <p>
+      Computer Vision is a field of AI that enables computers to analyse images
+      and videos. It helps systems identify objects, faces, scenes and visual
+      patterns.
+    </p>
+
+    <h3>Easy English Version</h3>
+    <div class="topic-box">
+      <p>Computer Vision helps computers understand information in pictures and videos.</p>
+      <p><strong>Example:</strong> A photo app can group pictures that contain dogs. A driver-assistance system may detect cars, people or road signs.</p>
+      <p><strong>Image classification:</strong> Gives an image a label, such as “cat”.</p>
+      <p><strong>Object detection:</strong> Finds objects and their locations in an image.</p>
+      <p><strong>Image segmentation:</strong> Separates an image into areas or objects.</p>
+    </div>
+
+    <h3>How Computer Vision Works</h3>
+    <ol>
+      <li><strong>Get an image:</strong> A camera or file provides visual data.</li>
+      <li><strong>Prepare the data:</strong> Format the image for the model.</li>
+      <li><strong>Find patterns:</strong> Look for shapes and other features.</li>
+      <li><strong>Return a result:</strong> Classify the image or identify objects.</li>
+    </ol>
+
+    <h3>Important Words</h3>
+    <div class="topic-box">
+      <p><strong>Pixel:</strong> A tiny element that forms a digital image.</p>
+      <p><strong>Label:</strong> The name of an object or image category.</p>
+      <p><strong>Detection:</strong> Finding an object and where it is.</p>
+      <p><strong>Limitation:</strong> Results can be affected by poor lighting, blurry images or limited training examples.</p>
+    </div>
+
+    <h3>Visual Summary</h3>
+    <div class="mindmap" role="img" aria-label="Computer Vision analyses images and videos to identify objects.">
+      <div class="map-center">Computer Vision</div>
+      <div class="map-branches">
+        <span>Images</span>
+        <span>Visual Patterns</span>
+        <span>Classification</span>
+        <span>Object Detection</span>
+      </div>
+    </div>
+
+    <h3>Short Audio Script</h3>
+    <div class="topic-box">
+      Computer Vision helps computers analyse images and videos. Image
+      classification gives an image a label, such as cat or car. Object
+      detection finds objects and shows where they are. Computer Vision
+      can support photo search and driver assistance. Its results can be
+      affected by blurry pictures, poor lighting and limited training
+      examples. Important decisions should be checked by people.
+    </div>
+
+    <h3>🎧 Audio Listening</h3>
+    <button type="button" onclick="speakTopic('cv')">▶ Listen to Computer Vision</button>
+    <button type="button" class="stop-btn" onclick="stopAudio()">■ Stop Audio</button>
+    <p id="audio-status-cv" aria-live="polite" role="status"></p>
+
+    <h3>📝 Computer Vision Quiz</h3>
+    <form class="quiz" data-topic="cv">
+      <div class="question">
+        <p>1. Computer Vision mainly works with what?</p>
+        <label><input type="radio" name="cvq1" value="a"> Images and videos</label>
+        <label><input type="radio" name="cvq1" value="b"> Only passwords</label>
+        <label><input type="radio" name="cvq1" value="c"> Only sound waves</label>
+      </div>
+
+      <div class="question">
+        <p>2. Which is a Computer Vision task?</p>
+        <label><input type="radio" name="cvq2" value="a"> Object detection</label>
+        <label><input type="radio" name="cvq2" value="b"> Word spelling only</label>
+        <label><input type="radio" name="cvq2" value="c"> Battery charging</label>
+      </div>
+
+      <button type="submit">Check Computer Vision Answers</button>
+      <p class="result" aria-live="polite"></p>
+    </form>
+
+    <a class="back-link" href="#study-notes">↑ Back to Topics</a>
+  </section>
+
+  <!-- TOPIC 4: NEURAL NETWORKS -->
+  <section class="card topic-detail" id="nn">
+    <h2>4. Neural Networks</h2>
+
+    <h3>Explanation</h3>
+    <p>
+      Neural Networks are machine learning models made of connected artificial
+      neurons. Their layers learn patterns from data.
+    </p>
+
+    <h3>Easy English Version</h3>
+    <div class="topic-box">
+      <p>A neural network is a type of machine learning model made of connected mathematical units.</p>
+      <p><strong>Example:</strong> A model can study pictures of handwritten numbers and learn to recognise numbers in new pictures.</p>
+      <p><strong>Input layer:</strong> Receives information.</p>
+      <p><strong>Hidden layers:</strong> Learn useful patterns.</p>
+      <p><strong>Output layer:</strong> Gives a prediction or result.</p>
+      <p><strong>Training:</strong> The model compares its predictions with the target and adjusts its parameters to reduce error.</p>
+    </div>
+
+    <h3>How a Neural Network Learns</h3>
+    <ol>
+      <li><strong>Input:</strong> Give the model data.</li>
+      <li><strong>Calculate:</strong> Information moves through the layers.</li>
+      <li><strong>Predict:</strong> The output layer gives an answer.</li>
+      <li><strong>Adjust:</strong> The model updates its parameters during training.</li>
+      <li><strong>Repeat:</strong> Training continues to improve performance.</li>
+    </ol>
+
+    <h3>Important Words</h3>
+    <div class="topic-box">
+      <p><strong>Neuron:</strong> A mathematical unit that processes inputs.</p>
+      <p><strong>Weight:</strong> A value adjusted as the network learns.</p>
+      <p><strong>Training:</strong> Adjusting model parameters using examples.</p>
+      <p><strong>Loss:</strong> A measure of prediction error.</p>
+      <p><strong>Limitation:</strong> Neural networks may need suitable data and computing resources, and their predictions can be difficult to explain.</p>
+    </div>
+
+    <h3>Visual Summary</h3>
+    <div class="mindmap" role="img" aria-label="A neural network uses input, hidden and output layers.">
+      <div class="map-center">Neural Network</div>
+      <div class="map-branches">
+        <span>Input Layer</span>
+        <span>Hidden Layers</span>
+        <span>Output Layer</span>
+        <span>Training</span>
+        <span>Predictions</span>
+      </div>
+    </div>
+
+    <h3>Short Audio Script</h3>
+    <div class="topic-box">
+      A neural network is a machine learning model made of connected
+      mathematical units. The input layer receives data, hidden layers
+      learn patterns, and the output layer gives a result. During training,
+      the network compares its prediction with the target and adjusts its
+      weights to reduce error. Neural networks can recognise images and
+      process language, but they may need lots of data and their decisions
+      are not always easy to explain.
+    </div>
+
+    <h3>🎧 Audio Listening</h3>
+    <button type="button" onclick="speakTopic('nn')">▶ Listen to Neural Networks</button>
+    <button type="button" class="stop-btn" onclick="stopAudio()">■ Stop Audio</button>
+    <p id="audio-status-nn" aria-live="polite" role="status"></p>
+
+    <h3>📝 Neural Networks Quiz</h3>
+    <form class="quiz" data-topic="nn">
+      <div class="question">
+        <p>1. Which layer receives the input data?</p>
+        <label><input type="radio" name="nnq1" value="a"> Output layer</label>
+        <label><input type="radio" name="nnq1" value="b"> Input layer</label>
+        <label><input type="radio" name="nnq1" value="c"> Final report</label>
+      </div>
+
+      <div class="question">
+        <p>2. What do neural networks learn from?</p>
+        <label><input type="radio" name="nnq2" value="a"> Training data</label>
+        <label><input type="radio" name="nnq2" value="b"> Nothing at all</label>
+        <label><input type="radio" name="nnq2" value="c"> Monitor size</label>
+      </div>
+
+      <button type="submit">Check Neural Network Answers</button>
+      <p class="result" aria-live="polite"></p>
+    </form>
+
+    <a class="back-link" href="#study-notes">↑ Back to Topics</a>
+  </section>
+
+  <!-- TOPIC 5: GENERATIVE AI -->
+  <section class="card topic-detail" id="genai">
+    <h2>5. Generative AI</h2>
+
+    <h3>Explanation</h3>
+    <p>
+      Generative AI creates new content based on patterns learned from training
+      data. It can generate text, images, audio and code.
+    </p>
+
+    <h3>Easy English Version</h3>
+    <div class="topic-box">
+      <p>Generative AI is a type of AI that creates new content by learning patterns from examples in training data.</p>
+      <p><strong>Example:</strong> A student can ask an AI tool to draft a short explanation of a topic or create an illustration.</p>
+      <p><strong>Prompt:</strong> Instructions given to the AI tool.</p>
+      <p><strong>Generated output:</strong> The content produced by the tool.</p>
+      <p><strong>Human review:</strong> A person checks the content for accuracy and suitability.</p>
+    </div>
+
+    <h3>How Generative AI Works</h3>
+    <ol>
+      <li><strong>Write a prompt:</strong> Explain what you need.</li>
+      <li><strong>Process the prompt:</strong> The model uses learned patterns.</li>
+      <li><strong>Generate content:</strong> The tool creates an output.</li>
+      <li><strong>Check the result:</strong> Verify important facts and improve unclear parts.</li>
+    </ol>
+
+    <h3>Important Words</h3>
+    <div class="topic-box">
+      <p><strong>Prompt:</strong> Instructions given to an AI model.</p>
+      <p><strong>Training data:</strong> Examples used to train the model.</p>
+      <p><strong>Hallucination:</strong> Information that sounds correct but may be false or unsupported.</p>
+      <p><strong>Bias:</strong> A problem that can produce unfair or unbalanced outputs.</p>
+      <p><strong>Limitation:</strong> Generated content can contain mistakes or omit important information. Human review is necessary.</p>
+    </div>
+
+    <h3>Visual Summary</h3>
+    <div class="mindmap" role="img" aria-label="A prompt goes into generative AI, which creates content that a person reviews.">
+      <div class="map-center">Generative AI</div>
+      <div class="map-branches">
+        <span>Prompt</span>
+        <span>AI Model</span>
+        <span>Generated Content</span>
+        <span>Human Review</span>
+        <span>Improved Result</span>
+      </div>
+    </div>
+
+    <h3>Short Audio Script</h3>
+    <div class="topic-box">
+      Generative AI creates new content, such as text, pictures, audio and
+      computer code. The user gives it a prompt that tells the tool what to
+      make. It can draft simple study notes. However, generated content can
+      include incorrect facts or bias. Always check important information
+      against reliable sources and have a person review the result before
+      using it for learning.
+    </div>
+
+    <h3>🎧 Audio Listening</h3>
+    <button type="button" onclick="speakTopic('genai')">▶ Listen to Generative AI</button>
+    <button type="button" class="stop-btn" onclick="stopAudio()">■ Stop Audio</button>
+    <p id="audio-status-genai" aria-live="polite" role="status"></p>
+
+    <h3>📝 Generative AI Quiz</h3>
+    <form class="quiz" data-topic="genai">
+      <div class="question">
+        <p>1. What can Generative AI do?</p>
+        <label><input type="radio" name="genaiq1" value="a"> Create new content</label>
+        <label><input type="radio" name="genaiq1" value="b"> Only switch off computers</label>
+        <label><input type="radio" name="genaiq1" value="c"> Only clean screens</label>
+      </div>
+
+      <div class="question">
+        <p>2. Which is an example of Generative AI output?</p>
+        <label><input type="radio" name="genaiq2" value="a"> A generated image</label>
+        <label><input type="radio" name="genaiq2" value="b"> A power cable</label>
+        <label><input type="radio" name="genaiq2" value="c"> A mouse pad</label>
+      </div>
+
+      <button type="submit">Check Generative AI Answers</button>
+      <p class="result" aria-live="polite"></p>
+    </form>
+
+    <a class="back-link" href="#study-notes">↑ Back to Topics</a>
+  </section>
+
+  <!-- VERIFICATION REPORT -->
+  <section class="card" id="verification">
+    <h2>Verification Report</h2>
+    <p>
+      This section records how simplified study aids should be checked against
+      their original learning resources. It does not claim that a full
+      source-by-source verification or peer review has already been completed.
+    </p>
+
+    <h3>Source Selected</h3>
+    <p>
+      <a href="https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/"
+         target="_blank" rel="noopener noreferrer">
+        MIT OpenCourseWare — Introduction to Machine Learning
+      </a>
+    </p>
+
+    <h3>Verification Checklist</h3>
+    <ul>
+      <li>Compare simplified definitions with the relevant original lecture or reading.</li>
+      <li>Check that key terms, examples and limitations are preserved.</li>
+      <li>Record the original source section and any edits made.</li>
+      <li>Ask a human reviewer to check accuracy and clarity.</li>
+      <li>Collect actual feedback from three peers.</li>
+      <li>Compare outputs from three AI tools and record the results.</li>
+    </ul>
+
+    <h3>Current Status</h3>
+    <p>
+      <strong>Draft prepared:</strong> Beginner-friendly notes, visual
+      summaries, browser text-to-speech scripts and quizzes are included
+      for five AI topics.
+    </p>
+    <p>
+      <strong>Still to complete:</strong> Source-by-source comparison,
+      three-peer feedback, three-tool comparison and final review.
+    </p>
+    <p>
+      <strong>Important limitation:</strong> Browser text-to-speech plays
+      speech in the browser; it is not a downloadable MP3 file. The Machine
+      Learning MP3 player above needs the file at
+      <code>audio/ml_basics.mp3</code>. AI-generated explanations can contain
+      errors, so check them against original resources and get human feedback.
+    </p>
+    <p>
+      <strong>Detailed report:</strong> See the separate
+      <code>verification_report.md</code> file in your project materials.
+    </p>
+
+    <a class="back-link" href="#study-notes">↑ Back to Topics</a>
+  </section>
+</main>
+
+<footer>
+  <p>AI Accessibility Study Aids | Learn Anywhere, Anytime</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
